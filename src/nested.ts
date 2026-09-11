@@ -7,9 +7,7 @@ import { Question, QuestionType } from "./interfaces/question";
  */
 
 export function getPublishedQuestions(questions: Question[]): Question[] {
-    return questions.filter(
-        (question: Question): boolean => question.published,
-    );
+    return questions.filter((q: Question): boolean => q.published);
 }
 
 /**
@@ -18,7 +16,10 @@ export function getPublishedQuestions(questions: Question[]): Question[] {
  * `expected`, and an empty array for its `options`.
  */
 export function getNonEmptyQuestions(questions: Question[]): Question[] {
-    return [];
+    return questions.filter(
+        (q: Question): boolean =>
+            q.body.length > 0 || q.expected.length > 0 || q.options.length > 0,
+    );
 }
 
 /***
