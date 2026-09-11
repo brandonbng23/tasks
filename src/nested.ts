@@ -169,7 +169,9 @@ export function renameQuestionById(
     targetId: number,
     newName: string,
 ): Question[] {
-    return [];
+    return questions.map((q: Question): Question => {
+        return { ...q, name: q.id === targetId ? newName : q.name };
+    });
 }
 
 /***
