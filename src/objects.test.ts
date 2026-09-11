@@ -118,7 +118,8 @@ describe("Testing the object functions", () => {
 
     ///////////////////////////////////
     // toMarkdown
-    test("(3 pts) Testing the toMarkdown function", () => {
+
+    test("Testing the toMarkdown function", () => {
         expect(toMarkdown(ADDITION_QUESTION)).toEqual(`# Addition
 What is 2+2?`);
         expect(toMarkdown(LETTER_QUESTION)).toEqual(`# Letters
@@ -145,7 +146,8 @@ What shape can you make with one line?
 
     ///////////////////////////////////
     // renameQuestion
-    test("(3 pts) Testing the renameQuestion function", () => {
+
+    test("Testing the renameQuestion function", () => {
         expect(
             renameQuestion(ADDITION_QUESTION, "My Addition Question"),
         ).toEqual({
@@ -174,7 +176,8 @@ What shape can you make with one line?
 
     ///////////////////////////////////
     // publishQuestion
-    test("(3 pts) Testing the publishQuestion function", () => {
+
+    test("Testing the publishQuestion function", () => {
         expect(publishQuestion(ADDITION_QUESTION)).toEqual({
             id: 1,
             name: "Addition",
@@ -209,7 +212,8 @@ What shape can you make with one line?
 
     ///////////////////////////////////
     // duplicateQuestion
-    test("(3 pts) Testing the duplicateQuestion function", () => {
+
+    test("Testing the duplicateQuestion function", () => {
         expect(duplicateQuestion(9, ADDITION_QUESTION)).toEqual({
             id: 9,
             name: "Copy of Addition",
@@ -234,7 +238,8 @@ What shape can you make with one line?
 
     ///////////////////////////////////
     // addOption
-    test("(3 pts) Testing the addOption function", () => {
+
+    test("Testing the addOption function", () => {
         expect(addOption(SHAPE_QUESTION, "heptagon")).toEqual({
             id: 9,
             name: "Shapes",
@@ -253,13 +258,15 @@ What shape can you make with one line?
             options: ["red", "apple", "firetruck", "squiggles"],
             expected: "red",
             points: 1,
+
             published: true,
         });
     });
 
     ///////////////////////////////////
     // mergeQuestion
-    test("(3 pts) Testing the mergeQuestion function", () => {
+
+    test("Testing the mergeQuestion function", () => {
         expect(
             mergeQuestion(
                 192,
