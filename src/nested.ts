@@ -30,7 +30,8 @@ export function findQuestion(
     questions: Question[],
     id: number,
 ): Question | null {
-    return null;
+    const foundID = questions.find((q: Question): boolean => q.id === id);
+    return foundID ? foundID : null;
 }
 
 /**
@@ -38,7 +39,7 @@ export function findQuestion(
  * with the given `id`.
  */
 export function removeQuestion(questions: Question[], id: number): Question[] {
-    return [];
+    return questions.filter((q: Question): boolean => q.id != id);
 }
 
 /***
