@@ -251,5 +251,13 @@ export function duplicateQuestionInArray(
     targetId: number,
     newId: number,
 ): Question[] {
-    return [];
+    const targetQuestion: Question = questions.find(
+        (q: Question): boolean => q.id === targetId,
+    );
+
+    const targetQuestionInd: number = questions.findIndex(
+        (q: Question): boolean => q.id === targetId,
+    );
+
+    return questions.splice(targetQuestionInd, 0, targetQuestion);
 }
