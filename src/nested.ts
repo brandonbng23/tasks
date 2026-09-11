@@ -211,13 +211,33 @@ export function changeQuestionTypeById(
  * Remember, if a function starts getting too complicated, think about how a helper function
  * can make it simpler! Break down complicated tasks into little pieces.
  */
+
+/* Helper function to editOption to assist in adding or updating a function */
+function updateOptions(
+    options: string[],
+    index: number,
+    newOption: string,
+): string[] {
+    return index === -1 ?
+            [...options, newOption]
+        :   options.splice(index + 1, index + 1, newOption);
+}
+
 export function editOption(
     questions: Question[],
     targetId: number,
     targetOptionIndex: number,
     newOption: string,
 ): Question[] {
-    return [];
+    return questions.map((q: Question): Question => {
+        return {
+            ...q,
+            options:
+                q.id === targetId ?
+                    updateOptions(q.options, targetOptionIndex, newOption)
+                :   q.options,
+        };
+    });
 }
 
 /***
