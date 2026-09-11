@@ -218,9 +218,13 @@ function updateOptions(
     index: number,
     newOption: string,
 ): string[] {
-    return index === -1 ?
-            [...options, newOption]
-        :   options.splice(index + 1, index + 1, newOption);
+    if (index === -1) {
+        return [...options, newOption];
+    }
+
+    const optionsCopy = [...options];
+    optionsCopy[index] = newOption;
+    return optionsCopy;
 }
 
 export function editOption(
