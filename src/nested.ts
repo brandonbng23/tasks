@@ -6,7 +6,6 @@ import { makeBlankQuestion, duplicateQuestion } from "./objects";
  * Consumes an array of questions and returns a new array with only the questions
  * that are `published`.
  */
-
 export function getPublishedQuestions(questions: Question[]): Question[] {
     return questions.filter((q: Question): boolean => q.published);
 }

@@ -1,63 +1,28 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./App.css";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+import { Counter } from "./components/Counter";
 
 function App(): React.JSX.Element {
     return (
         <div className="App">
-            <header className="App-header">
-                UD CISC275 with React Hooks and TypeScript
-            </header>
-            <h1>This is header text</h1>
-            <Container>
-                <Row>
-                    <Col>
-                        <p>Brandon Goldberg</p>
-                        <p>
-                            Edit <code>src/App.tsx</code> and save. This page
-                            will automatically reload.
-                        </p>
-                        <p>Hello World</p>
-                        <img
-                            src="./phin.jpeg"
-                            alt="Phineas, a medium-sized dog with white fur and a brown nose."
-                        ></img>
-                        <ul>
-                            <li>This</li>
-                            <li>is</li>
-                            <li>a</li>
-                            <li>list</li>
-                        </ul>
-
-                        <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={() => {
-                                console.log("Hello World!");
-                            }}
-                        >
-                            Log Hello World
-                        </button>
-                        <div
-                            style={{
-                                backgroundColor: "red",
-                                height: "50px",
-                                width: "75px",
-                            }}
-                        ></div>
-                    </Col>
-
-                    <Col>
-                        <div
-                            style={{
-                                backgroundColor: "red",
-                                height: "50px",
-                                width: "75px",
-                            }}
-                        ></div>
-                    </Col>
-                </Row>
-            </Container>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            {/* <RevealAnswer></RevealAnswer>
+            <hr />
+            <StartAttempt></StartAttempt>
+            <hr />
+            <TwoDice></TwoDice>
+            <hr />
+            <ChangeType></ChangeType>
+            <hr />
+            <CycleHoliday></CycleHoliday> */}
         </div>
     );
 }
