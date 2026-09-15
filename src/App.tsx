@@ -4,14 +4,14 @@ import "./App.css";
 import { ChangeType } from "./components/ChangeType";
 import { RevealAnswer } from "./components/RevealAnswer";
 import { StartAttempt } from "./components/StartAttempt";
-// import { TwoDice } from "./components/TwoDice";
+import { TwoDice } from "./components/TwoDice";
 // import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
 
 function App(): React.JSX.Element {
     return (
         <div className="App">
-            <p>CISC275</p>
+            <p>Brandon N. Goldberg - CISC275</p>
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -19,7 +19,7 @@ function App(): React.JSX.Element {
             <hr />
             <StartAttempt></StartAttempt>
             <hr />
-            {/* <TwoDice></TwoDice> */}
+            <TwoDice></TwoDice>
             <hr />
             <ChangeType></ChangeType>
             <hr />
